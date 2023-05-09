@@ -1,0 +1,75 @@
+/* //* MyriadPro */
+
+@font-face {
+  font-family: 'MyriadPro-Black';
+  src: local('MyriadPro-Black'),
+    url('/fonts/MyriadPro/MyriadPro-Black.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MyriadPro-Bold';
+  src: local('MyriadPro-Bold'),
+    url('/fonts/MyriadPro/MyriadPro-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MyriadPro-Regular';
+  src: local('MyriadPro-Regular'),
+    url('/fonts/MyriadPro/MyriadPro-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MyriadPro-Semibold';
+  src: local('MyriadPro-Semibold'),
+    url('/fonts/MyriadPro/MyriadPro-Semibold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MyriadPro-Light';
+  src: local('MyriadPro-Light'),
+    url('/fonts/MyriadPro/MyriadPro-Light.ttf') format('truetype');
+}
+
+/* //* HelveticaNeueCyr */
+
+@font-face {
+  font-family: 'HelveticaNeueCyr-Black';
+  src: local('HelveticaNeueCyr-Black'),
+    url('/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr-Bold';
+  src: local('HelveticaNeueCyr-Bold'),
+    url('/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr-Light';
+  src: local('HelveticaNeueCyr-Light'),
+    url('/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr-Medium';
+  src: local('HelveticaNeueCyr-Medium'),
+    url('/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.ttf')
+      format('truetype');
+}
+
+/* //* Pragmatica */
+
+@font-face {
+  font-family: 'Pragmatica-Medium';
+  src: local('Pragmatica-Medium'),
+    url('/fonts/Pragmatica/Pragmatica-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Pragmatica-Black';
+  src: local('Pragmatica-Black'),
+    url('/fonts/Pragmatica/Pragmatica-Black.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Pragmatica-Bold';
+  src: local('Pragmatica-Bold'),
+    url('/fonts/Pragmatica/Pragmatica-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Pragmatica-Light';
+  src: local('Pragmatica-Light'),
+    url('/fonts/Pragmatica/Pragmatica-Light.ttf') format('truetype');
+}

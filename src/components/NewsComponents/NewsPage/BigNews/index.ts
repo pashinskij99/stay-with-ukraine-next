@@ -1,0 +1,1 @@
+export {BigNews} from './BigNews'

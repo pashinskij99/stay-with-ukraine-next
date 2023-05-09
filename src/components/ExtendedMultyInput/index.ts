@@ -1,0 +1,1 @@
+export {ExtendedMultyInput} from './ExtendedMultyInput'

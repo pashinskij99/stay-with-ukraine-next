@@ -1,0 +1,1 @@
+export {SecondaryNews} from './SecondaryNews'

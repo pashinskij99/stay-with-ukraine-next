@@ -1,0 +1,1 @@
+export {SmallNewsItem} from './SmallNewsItem'

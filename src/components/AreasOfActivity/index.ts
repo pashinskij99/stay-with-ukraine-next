@@ -1,0 +1,1 @@
+export {AreasOfActivity} from './AreasOfActivity'
