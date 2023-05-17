@@ -114,11 +114,17 @@ const NewsItemPage1: React.FC = () => {
 
   return (
     <MetaLayer
-      title='Stay with Ukraine | News Section | 31st Economic Forum in Karpacz'
-      description='The Stay With Ukraine organization had the pleasure of attending the 31st Economic Forum in Karpacz, where they engaged with an esteemed group of individuals from government, business, and various fields of expertise.'
+      title={locale === 'en' ? '31st Economic Forum in Karpacz | Stay UA' : '31-й економічний форум у Карпачі | Stay UA'}
+      description={locale === 'en' ? 'Stay With Ukraine organization attended the 31st Economic Forum in Karpacz, engaging with government, business, and experts.' : 'Організація Stay With Ukraine відвідала 31-й Економічний форум у Карпачі. Спілкувались із урядом, бізнесом та експертами.'}
       backgroundColor={COLORS.WHITE}
       currentPage='1'
       headerStyle='black'
+      headChildren={
+        <>
+          <link rel="alternate" hrefLang="en" href="https://www.stayua.com/news/1" />
+          <link rel="alternate" hrefLang="uk" href="https://www.stayua.com/uk/news/1" />
+        </>
+      }
     >
       <StyledMainContainer>
         <StyledContentContainer>

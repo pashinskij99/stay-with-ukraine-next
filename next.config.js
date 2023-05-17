@@ -1,17 +1,17 @@
 const path = require('path');
 
 module.exports = {
-  redirects: async () => [
-    {
-      source: '/:path*',
-      has: [{ type: 'host', value: 'stay-with-ukraine-next.vercel.app' }],
-      destination: 'https://www.stay-with-ukraine-next.vercel.app/:path*',
-      permanent: true
-    }
-  ],
-  experimental: {
-    nextScriptWorkers: true,
-  },
+  // experimental: {
+  //   nextScriptWorkers: true,
+  // },
+  // redirects: async () => [
+  //   {
+  //     source: '/:path*',
+  //     has: [{ type: 'host', value: 'stayua.com' }],
+  //     destination: 'https://www.stayua.com/:path*',
+  //     permanent: true
+  //   }
+  // ],
   i18n: {
     locales: ['en', 'uk'],
     defaultLocale: 'en',
