@@ -53,13 +53,14 @@ const HelpUkraine: React.FC = () => {
     message: '',
   };
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  //TODO: uncomment if there are errors
+  // useEffect(() => {
+  //   setMounted(true);
+  // }, []);
 
-  if (!mounted) {
-    return null;
-  }
+  // if (!mounted) {
+  //   return null;
+  // }
 
   const renderInputs = () =>
     map(contact.inputs, (input) => {
@@ -79,7 +80,7 @@ const HelpUkraine: React.FC = () => {
       }
       if (input.name === 'organization')
         return (
-          <StyledSelectContainer>
+          <StyledSelectContainer key={`help-Ukraine-field-organization`}>
             <FilterMenu
               isInNews={false}
               items={helpUkraine.selectItems}
@@ -120,11 +121,17 @@ const HelpUkraine: React.FC = () => {
 
   return (
     <MetaLayer
-      title='Stay with Ukraine | Help Ukraine'
-      description='Help Ukraine'
+      title={locale === 'en' ? 'Stay With Ukraine | How to Help Ukraine' : 'Допомогти Україні |Stay UA'}
+      description={locale === 'en' ?'The organization was created with the sole purpose of helping the Ukrainian people and saving as many lives as possible through any means possible.' : 'Організація створена з єдиною метою – допомогти українському народу та врятувати якомога більше життів будь-якими можливими засобами.'}
       backgroundColor={COLORS.WHITE}
       currentPage='help-Ukraine'
       headerStyle='transparent'
+      headChildren={
+        <>
+          <link rel="alternate" hrefLang="en" href="https://www.stayua.com/help-Ukraine" />
+          <link rel="alternate" hrefLang="uk" href="https://www.stayua.com/uk/help-Ukraine" />
+        </>
+      }
     >
       <FlagBlock
         title={locale === 'en' ? 'Help Ukraine' : 'Допоможіть Україні'}

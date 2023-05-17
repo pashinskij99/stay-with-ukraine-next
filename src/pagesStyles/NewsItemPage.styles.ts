@@ -106,7 +106,7 @@ export const StyledDataText = styled(ExtendedText)`
   color: ${COLORS.SECONDARY_GREY};
 `;
 
-export const StyledTitle = styled.h2`
+export const StyledTitle = styled.h1`
   font-family: 'MyriadPro-Regular', sans-serif;
   font-style: normal;
   font-weight: 400;

@@ -44,13 +44,15 @@ const Contact: React.FC = () => {
     message: '',
   };
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
-  if (!mounted) {
-    return null;
-  }
+  //TODO: uncomment if there are errors
+  // useEffect(() => {
+  //   setMounted(true);
+  // }, []);
+
+  // if (!mounted) {
+  //   return null;
+  // }
 
   const renderInputs = () =>
     map(contact.inputs, (input) => {
@@ -89,11 +91,17 @@ const Contact: React.FC = () => {
 
   return (
     <MetaLayer
-      title='Stay with Ukraine | Contact us'
-      description='Get in touch with us'
+      title={locale === 'en' ? 'Contact Us | Stay UA' : 'Контакти | Stay UA'}
+      description={locale === 'en' ? 'Get in touch with Stay With Ukraine organization.' : "Контакти для зв'язку з організацією Stay With Ukraine."}
       backgroundColor={COLORS.WHITE}
       currentPage='contact'
       headerStyle='transparent'
+      headChildren={
+        <>
+          <link rel="alternate" hrefLang="en" href="https://www.stayua.com/contact" />
+          <link rel="alternate" hrefLang="uk" href="https://www.stayua.com/uk/contact" />
+        </>
+      }
     >
       <FlagBlock title={locale === 'en' ? 'Contact Us' : 'Контакти'} />
       <StyledMainContainer>

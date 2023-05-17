@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { GeneralH2 } from '@/styles/general.styles';
+import { GeneralMainPageTitle } from '@/styles/general.styles';
 import { COLORS } from '@/utils/colors';
 
 import { IMAGES } from '#/*';
@@ -28,7 +28,7 @@ export const StyledMainContainer = styled.div`
   }
 `;
 
-export const StyledTitle = styled(GeneralH2)`
+export const StyledTitle = styled(GeneralMainPageTitle)`
   margin-bottom: 40px;
 
   @media screen and (max-width: 500px) {

@@ -1,4 +1,5 @@
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
@@ -32,6 +33,19 @@ export default class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
+           <Script
+              src="https://www.googletagmanager.com/gtag/js?id=G-0G4H9D9HY9"
+              strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){window.dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-0G4H9D9HY9');
+            `}
+          </Script>
           <link rel='icon' href='/favicon.ico' />
           <link
             rel='stylesheet'

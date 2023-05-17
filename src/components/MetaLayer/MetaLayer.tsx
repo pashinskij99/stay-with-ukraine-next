@@ -12,6 +12,7 @@ type IndexProps = {
   title?: string;
   description?: string;
   children?: ReactNode;
+  headChildren?: ReactNode;
   currentPage?: string;
   backgroundColor?: string;
   headerStyle?: 'transparent' | 'black';
@@ -21,6 +22,7 @@ export const MetaLayer: React.FC<IndexProps> = ({
   description,
   title,
   children,
+  headChildren,
   currentPage,
   backgroundColor,
   headerStyle,
@@ -31,6 +33,7 @@ export const MetaLayer: React.FC<IndexProps> = ({
         <title>{title}</title>
         <meta name='description' content={description} />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        {headChildren}
       </Head>
       <main style={{ backgroundColor: backgroundColor }}>
         <Header currentPage={currentPage} headerStyle={headerStyle} />
