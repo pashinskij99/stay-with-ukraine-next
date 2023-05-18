@@ -2,14 +2,10 @@ import Script from 'next/script'
 import styled from 'styled-components'
 
 import {
-  AboutUs,
   AreasOfActivity,
-  Excitements,
   LatestNews,
   Map,
-  OurFriends,
   StayWithUkraine,
-  TheyAreWithUs,
 } from '@/components'
 import { getLocale } from '@/locales'
 import { COLORS } from '@/utils/colors'
@@ -50,7 +46,7 @@ export default function Home() {
           <link rel='alternate' hrefLang='uk' href='https://www.stayua.com/uk' />
         </>
       }>
-      <Script id='organization-structured-data' strategy='afterInteractive' type='application/ld+json'>
+      <Script async id='organization-structured-data' strategy='afterInteractive' type='application/ld+json'>
         {`
           "@context": "https://schema.org",
           "@type": "Organization",

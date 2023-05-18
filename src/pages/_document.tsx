@@ -36,8 +36,9 @@ export default class MyDocument extends Document {
            <Script
               src="https://www.googletagmanager.com/gtag/js?id=G-0G4H9D9HY9"
               strategy="afterInteractive"
+              async
           />
-          <Script id="google-analytics" strategy="afterInteractive">
+          <Script id="google-analytics" strategy="afterInteractive" async>
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){window.dataLayer.push(arguments);}

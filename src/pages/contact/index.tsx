@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import { Field, FieldProps, Formik } from 'formik';
@@ -9,7 +9,6 @@ import {
   ExtendedTextField,
   FlagBlock,
   LatestNews,
-  Map,
   MetaLayer,
 } from '@/components';
 import { TEXT_PRESETS } from '@/components/ExtendedText/ExtendedText.types';
