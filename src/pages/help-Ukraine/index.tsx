@@ -3,6 +3,9 @@ import { toast } from 'react-toastify';
 import axios from 'axios';
 import { Field, FieldProps, Formik } from 'formik';
 import { map } from 'lodash';
+import dynamic from "next/dynamic";
+
+const DynamicFormHelpUkraine = dynamic(() => import('@/components/ContactHelpUkraine').then((res) => res.default))
 
 import {
   ExtendedMultyInput,
@@ -12,6 +15,7 @@ import {
   LatestNews,
   MetaLayer,
 } from '@/components';
+import ContactHelpUkraine from "@/components/ContactHelpUkraine";
 import {
   HelpUkraineSelectType,
   NewsFilterFormatType,
@@ -22,6 +26,7 @@ import {
 import useWindowDimensions from '@/hooks/useWindowDimension';
 import strings, { getLocale } from '@/locales';
 import { COLORS } from '@/utils/colors';
+import {contactSchema} from "@/utils/contact.schema";
 
 import {
   StyledButton,
@@ -140,77 +145,19 @@ const HelpUkraine: React.FC = () => {
         <StyledTitle color={COLORS.BLACK} lang={locale}>
           {helpUkraine.title}
         </StyledTitle>
-        <Formik
-          key={resetKey}
-          initialValues={initialValues}
-          validationSchema={helpUkraineSchema}
-          onSubmit={(values, { setSubmitting }) => {
-            axios
-              .post(
-                'https://admin.stay-with-ua.admiral-studios.com/api/helps',
-                {
-                  firstName: values.firstName,
-                  lastName: values.lastName,
-                  email: values.email,
-                  phone: values.phone,
-                  support:
-                    selectedItem !== helpUkraine.selectItems[0]
-                      ? selectedItem.id
-                      : '',
-                  massage: values.message,
-                },
-              )
-              .then((response) => {
-                toast.success(
-                  locale === 'en'
-                    ? 'We will contact you soon'
-                    : 'Ми з вами звʼяжемось',
-                  {
-                    autoClose: 3000,
-                    position: 'top-right',
-                    hideProgressBar: true,
-                    closeOnClick: true,
-                    pauseOnHover: false,
-                    draggable: false,
-                    progress: undefined,
-                  },
-                );
-                setResetKey((prevKey) => prevKey + 1);
-              })
-              .catch((error) => {
-                console.error(error);
-                toast.error(
-                  locale === 'en' ? 'Something was wrong' : 'Щось не так',
-                  {
-                    autoClose: 3000,
-                    position: 'top-right',
-                    hideProgressBar: true,
-                    closeOnClick: true,
-                    pauseOnHover: false,
-                    draggable: false,
-                    progress: undefined,
-                  },
-                );
-              });
-            setResetKey((prevKey) => prevKey + 1);
-          }}
-        >
-          {({ errors, touched, handleSubmit }) => (
-            <div>
-              <StyledInputsContainer>{renderInputs()}</StyledInputsContainer>
-              <StyledButtonContainer>
-                <StyledButton
-                  onClick={() => handleSubmit()}
-                  disabled={Object.keys(errors).length > 0}
-                  isDisabled={Object.keys(errors).length > 0 || !touched}
-                  type='submit'
-                >
-                  {contact.buttonText}
-                </StyledButton>
-              </StyledButtonContainer>
-            </div>
-          )}
-        </Formik>
+
+          <DynamicFormHelpUkraine
+            locale={locale}
+            initialValues={initialValues}
+            setResetKey={setResetKey}
+            resetKey={resetKey}
+            renderInputs={renderInputs}
+            selectedItem={selectedItem}
+            contactSchema={contactSchema}
+            contact={contact}
+            helpUkraine={helpUkraine}
+          />
+
       </StyledMainContainer>
       <LatestNews isMainPage={false} />
     </MetaLayer>
