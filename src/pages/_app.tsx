@@ -13,9 +13,9 @@ export default function App({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // setTimeout(() => {
+    setTimeout(() => {
       setIsLoading(false);
-    // }, 3000);
+    }, 3000);
   }, []);
 
   //* Disable scroll on mobile Safari

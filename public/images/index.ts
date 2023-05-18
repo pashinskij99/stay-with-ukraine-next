@@ -1,16 +1,16 @@
 export const IMAGES = {
-  AOA_BUSINESS_COOPERATION: require('./AOA_buisnessCooperation.jpg'),
+  AOA_BUSINESS_COOPERATION: require('./AOA_buisnessCooperation.webp'),
   AOA_CLUB_OF_FRIENDS: require('./AOA_Club of friends.webp'),
-  AOA_COOPERATION: require('./AOA_Cooperation.png'),
-  AOA_CULTURE: require('./AOA_Culture.jpg'),
+  AOA_COOPERATION: require('./AOA_Cooperation.webp'),
+  AOA_CULTURE: require('./AOA_Culture.webp'),
   AOA_ECONOMIC_REVIVAL: require('./AOA_Economic Revival.webp'),
-  AOA_INTERNATIONAL_AFFAIRS: require('./AOA_International Affairs.jpg'),
+  AOA_INTERNATIONAL_AFFAIRS: require('./AOA_International Affairs.webp'),
   AOA_MEDIA: require('./AOA_Media.webp'),
   AOA_MEDICAL: require('./AOA_Medical.webp'),
-  BACKGROUND: require('./background.png'),
-  BACKGROUND_2: require('./background2.png'),
-  BACKGROUND_3: require('./background3.png'),
-  BACKGROUND_FLAG: require('./backgroundFlag.png'),
+  BACKGROUND: require('./background.webp'),
+  BACKGROUND_2: require('./background2.webp'),
+  BACKGROUND_3: require('./background3.webp'),
+  BACKGROUND_FLAG: require('./backgroundFlag.webp'),
   BACKGROUND_YELLOW_CIRCLE: require('./backgroundYellowCircle.png'),
   BBC_NEWS_UKRAINE: require('./bbcNewsUkraine.png'),
   CNN_INTERNATIONAL: require('./cnnInternational.png'),
@@ -21,12 +21,12 @@ export const IMAGES = {
 };
 
 export const SLIDES = {
-  SWU_SLIDE_1: require('./SWU_slide1.png'),
+  SWU_SLIDE_1: require('./SWU_slide1.webp'),
   SWU_SLIDE_2: require('./SWU_slide2.webp'),
-  SWU_SLIDE_3: require('./SWU_slide3.png'),
+  SWU_SLIDE_3: require('./SWU_slide3.webp'),
   SWU_SLIDE_4: require('./SWU_slide4.webp'),
   SWU_SLIDE_5: require('./SWU_slide5.webp'),
-  SWU_SLIDE_6: require('./SWU_slide6.png'),
+  SWU_SLIDE_6: require('./SWU_slide6.webp'),
   SWU_SLIDE_7: require('./SWU_slide7.jpg'),
 }
 
@@ -35,7 +35,7 @@ export const NEWS_IMAGES = {
   CHERNIHIV: require('./news/chernihiv.webp'),
   LATEST_NEWS_SOLDIER_BIG: require('./news/latestNewsSoldier.webp'),
   PRESIDENT_BIG: require('./news/president.webp'),
-  SENATE: require('./news/senate.jpeg'),
+  SENATE: require('./news/senate.webp'),
   THIRD_NEWS_IMG: require('./news/thirdNewsImg.jpeg'),
 }
 
@@ -47,22 +47,21 @@ export const FRIENDS_IMAGES = {
 }
 
 export const EXCITEMENTS_IMAGES = {
-  EXCITEMENT1: require('./excitement1.png'),
+  EXCITEMENT1: require('./excitement1.webp'),
 }
 
 export const WITH_US_IMAGES = {
   ADAM_NIEDZIELSKI: require('./withUs/AdamNiedzielski.jpg'),
   ANDRZEJ_ADAMCZYK: require('./withUs/AndrzejAdamczyk.webp'),
   ANN_LEE: require('./withUs/AnnLee.jpeg'),
-  ASHTON_KUTCHER: require('./withUs/ashtonKutcher.png'),
-  FABRICE_AUDAN: require('./withUs/FabriceAudan.jpg'),
+  ASHTON_KUTCHER: require('./withUs/ashtonKutcher.webp'),
   GERALD_HOWARTH: require('./withUs/GeraldHowarth.webp'),
-  JAKUB_MAZUR: require('./withUs/JakubMazur.jpeg'),
+  JAKUB_MAZUR: require('./withUs/JakubMazur.webp'),
   JELENA_NOURA: require('./withUs/jelenaNoura.png'),
   JOVAN_PROTIC: require('./withUs/JovanProtic.jpg'),
-  JUSIUS_SKACKAUSKAS: require('./withUs/JuliusSkackauskas.jpeg'),
+  JUSIUS_SKACKAUSKAS: require('./withUs/JuliusSkackauskas.webp'),
   KACPER_PLAZYNSKI: require('./withUs/KacperPlazynski.jpg'),
-  KOLINDA: require('./withUs/Kolinda.jpg'),
+  KOLINDA: require('./withUs/Kolinda.webp'),
   MARCIN_OCIEPA: require('./withUs/MarcinOciepa.jpg'),
   PRZEMYSLAW_CZARNEK: require('./withUs/PrzemysławCzarnek.jpeg'),
   SOME_GUY: require('./withUs/someGuy.png'),

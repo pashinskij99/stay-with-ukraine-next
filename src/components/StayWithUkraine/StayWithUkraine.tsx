@@ -8,7 +8,7 @@ import strings, { getLocale } from '@/locales';
 import { ICONS } from '../../../public/icons';
 import { NEWS_IMAGES,SLIDES } from '../../../public/images';
 import BrestFortress from '../../../public/images/animation/brest-fortress.webp';
-import WarFearImage from '../../../public/images/animation/war-fear.jpeg';
+import WarFearImage from '../../../public/images/animation/war-fear.webp';
 import { ExtendedButton } from '../ExtendedButton';
 import { TEXT_PRESETS } from '../ExtendedText/ExtendedText.types';
 
