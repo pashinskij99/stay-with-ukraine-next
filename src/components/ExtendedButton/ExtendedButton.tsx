@@ -66,6 +66,7 @@ export const ExtendedButton: FC<IExtendedButtonProps> = ({
   return (
     <ButtonContainer
       href={link || 'none'}
+      prefetch={false}
       onClick={onClick}
       hoverColor={getHoverColor()}
       style={containerStyles}

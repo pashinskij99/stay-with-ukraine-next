@@ -1,6 +1,7 @@
-import { useCallback, useState } from 'react';
+import { FC, useCallback, useState } from 'react';
 import Slider, { Settings } from 'react-slick';
-import { filter, map } from 'lodash';
+import filter from 'lodash/filter';
+import map from 'lodash/map';
 
 import strings, { getLocale } from '@/locales';
 import { GeneralH2 } from '@/styles/general.styles';
@@ -33,7 +34,7 @@ import {
   TheyAreWithUsUkTags,
 } from './TheyAreWithUs.types';
 
-export const TheyAreWithUs: React.FC = () => {
+export const TheyAreWithUs: FC = () => {
   const locale = getLocale();
   const { theyAreWithUs } = strings[locale];
   const [activeTag, setActiveTag] = useState<

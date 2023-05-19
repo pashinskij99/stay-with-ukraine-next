@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, FC, FocusEvent,FormEvent, useState } from 'react';
 
 import { getLocale } from '@/locales';
 
@@ -13,7 +13,7 @@ import {
 } from './ExtendedTextField.styles';
 import { ExtendedTextFieldType } from './ExtendedTextField.types';
 
-export const ExtendedTextField: React.FC<ExtendedTextFieldType> = ({
+export const ExtendedTextField: FC<ExtendedTextFieldType> = ({
   height,
   placeholder,
   buttonText,
@@ -29,7 +29,7 @@ export const ExtendedTextField: React.FC<ExtendedTextFieldType> = ({
   const [text, setText] = useState(value || '');
   const locale = getLocale();
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (setExtendedValue) setExtendedValue(event.target.value);
     setText(event.target.value);
     if (onChange) {
@@ -37,13 +37,13 @@ export const ExtendedTextField: React.FC<ExtendedTextFieldType> = ({
     }
   };
 
-  const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
+  const handleBlur = (event: FocusEvent<HTMLInputElement>) => {
     if (onBlur) {
       onBlur(event);
     }
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     //! TODO: Add correct function
   };

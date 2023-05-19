@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import { FC, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 import { PreloaderContainer } from './Preloader.styles';
@@ -7,7 +7,7 @@ interface Props {
   isLoading: boolean;
 }
 
-export const Preloader: React.FC<Props> = ({ isLoading }) => {
+export const Preloader: FC<Props> = ({ isLoading }) => {
   const preloaderContainerRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {

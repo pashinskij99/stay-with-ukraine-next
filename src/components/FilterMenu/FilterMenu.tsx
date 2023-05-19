@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { FC, useCallback, useEffect, useRef, useState } from 'react';
 
 import { getLocale } from '@/locales';
 
@@ -21,7 +21,7 @@ import {
 } from './FilterMenu.styles';
 import { FilterMenuType } from './FilterMenu.types';
 
-export const FilterMenu: React.FC<FilterMenuType> = ({
+export const FilterMenu: FC<FilterMenuType> = ({
   items,
   state,
   setState,

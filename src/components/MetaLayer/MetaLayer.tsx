@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 import { ToastContainer } from 'react-toastify';
 import Head from 'next/head';
 
@@ -18,7 +18,7 @@ type IndexProps = {
   headerStyle?: 'transparent' | 'black';
 };
 
-export const MetaLayer: React.FC<IndexProps> = ({
+export const MetaLayer: FC<IndexProps> = ({
   description,
   title,
   children,

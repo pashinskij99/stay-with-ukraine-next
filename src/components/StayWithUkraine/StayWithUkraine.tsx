@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react';
+import { FC, MouseEvent, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -40,7 +40,7 @@ const warImages2 = [
   SLIDES.SWU_SLIDE_6,
 ];
 
-export const StayWithUkraine: React.FC = () => {
+export const StayWithUkraine: FC = () => {
   const locale = getLocale();
   const { stayWithUa } = strings[locale];
 
@@ -62,7 +62,7 @@ export const StayWithUkraine: React.FC = () => {
     });
   }, []);
 
-  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     const targetElement = document.querySelector('#ourAreasOfActivity');
     if (targetElement) {
@@ -103,7 +103,7 @@ export const StayWithUkraine: React.FC = () => {
         <StyledBottomShadow />
       </StyledAnimationContainer>
       <StyledArrowContainer>
-        <Link href='#ourAreasOfActivity' onClick={handleClick}>
+        <Link href='#ourAreasOfActivity' onClick={handleClick} prefetch={false}>
           <StyledIcon
             alt='arrow down'
             src={ICONS.ARROW_DOWN}

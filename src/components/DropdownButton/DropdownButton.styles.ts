@@ -1,4 +1,4 @@
-import { transform } from 'lodash';
+import transform from 'lodash/transform';
 import Image from 'next/image';
 import styled from 'styled-components';
 

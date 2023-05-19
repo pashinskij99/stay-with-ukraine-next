@@ -1,3 +1,5 @@
+import { FC } from 'react';
+
 import strings, { getLocale } from '@/locales';
 import { COLORS } from '@/utils/colors';
 
@@ -10,7 +12,7 @@ import {
   StyledTitle,
 } from './TalkAboutFuture.styles';
 
-export const TalkAboutFuture: React.FC = () => {
+export const TalkAboutFuture: FC = () => {
   const locale = getLocale();
   const { talkAboutFuture } = strings[locale];
 

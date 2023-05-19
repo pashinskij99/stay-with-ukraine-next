@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { map } from 'lodash';
+import map from 'lodash/map';
 import Link from 'next/link';
 
 import useWindowDimensions from '@/hooks/useWindowDimension';
@@ -48,6 +48,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, headerStyle }) => {
           <StyledHeaderLink
             isselected={isCurrentPage ? 'true' : 'false'}
             href={link.path}
+            prefetch={false}
             key={`header-link-${link.name}`}
           >
             <ExtendedText preset={TEXT_PRESETS.SEMIBOLD_15}>
@@ -63,7 +64,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, headerStyle }) => {
     <StyledHeaderContainer headerStyle={headerStyle} isOpen={isOpen}>
       {headerStyle === 'transparent' && <StyledGradient isOpen={isOpen} />}
       <StyledLinksContainer>
-        <Link href={'/'}>
+        <Link href={'/'} prefetch={false}>
           <StyledLogo src={IMAGES.LOGO} alt='logo' width={114} height={41} />
         </Link>
         <StyledRoutesContainer>{renderLinks()}</StyledRoutesContainer>

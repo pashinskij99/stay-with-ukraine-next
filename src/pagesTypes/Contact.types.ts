@@ -1,9 +1,11 @@
+import { ChangeEvent, FocusEvent } from "react";
+
 export type FieldProps = {
   field: {
     name: string;
     value: any;
-    onChange: (e: React.ChangeEvent<any>) => void;
-    onBlur: (e: React.FocusEvent<any>) => void;
+    onChange: (e: ChangeEvent<any>) => void;
+    onBlur: (e: FocusEvent<any>) => void;
   };
   meta: {
     touched: boolean;

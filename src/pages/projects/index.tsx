@@ -1,16 +1,12 @@
-import React from 'react';
+import { FC } from 'react';
+import dynamic from 'next/dynamic'
 
-import { MetaLayer } from '@/components';
+const DynamicProject = dynamic(() => import('@/views/ProjectsView').then((res) => res.default), {ssr: false})
 
-
-const AboutUs: React.FC = () => {
+const Project: FC = () => {
   return (
-    <MetaLayer currentPage='projects'>
-      <div className='emptyPage'>
-        <h1>Projects page in developing progress</h1>
-      </div>
-    </MetaLayer>
+    <DynamicProject />
   );
 };
 
-export default AboutUs;
+export default Project;

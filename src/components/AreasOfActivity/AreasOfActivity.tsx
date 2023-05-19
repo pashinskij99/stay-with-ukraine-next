@@ -1,4 +1,5 @@
-import { map } from 'lodash';
+import { FC } from 'react';
+import map from 'lodash/map';
 
 import strings, { getLocale } from '@/locales';
 import { COLORS } from '@/utils/colors';
@@ -13,7 +14,7 @@ import {
   StyledAreasOfActivityTitle,
 } from './AreasOfActivity.styles';
 
-export const AreasOfActivity: React.FC = () => {
+export const AreasOfActivity: FC = () => {
   const locale = getLocale();
   const { areasOfActivity } = strings[locale];
 

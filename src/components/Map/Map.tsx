@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { FC, useCallback, useEffect, useState } from 'react';
 
 import useWindowDimensions from '@/hooks/useWindowDimension';
 import strings, { getLocale } from '@/locales';
@@ -17,7 +17,7 @@ import {
 } from './Map.styles';
 import { MapProps } from './Map.types';
 
-export const Map: React.FC<MapProps> = ({
+export const Map: FC<MapProps> = ({
   buttonLink,
   buttonText,
   isMainPage,

@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { orderBy } from 'lodash';
+import { FC, useEffect, useState } from 'react';
+import orderBy from 'lodash/orderBy';
 
 import { useAppSelector } from '@/hooks/redux';
 import strings, { getLocale } from '@/locales';
@@ -21,7 +21,7 @@ import {
   StyledNewsItemsContainer,
 } from './NewsBlock.styles';
 
-export const NewsBlock: React.FC = () => {
+export const NewsBlock: FC = () => {
   const locale = getLocale();
   const { latestNews } = strings[locale];
   const newsTag = useAppSelector(

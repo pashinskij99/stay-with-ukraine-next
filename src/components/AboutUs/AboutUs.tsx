@@ -1,5 +1,6 @@
-import Slider, { Settings } from 'react-slick';
-import { map } from 'lodash';
+import { FC } from 'react';
+import { Settings } from 'react-slick';
+import map from 'lodash/map';
 
 import useWindowDimensions from '@/hooks/useWindowDimension';
 import strings, { getLocale } from '@/locales';
@@ -11,7 +12,7 @@ import { AboutUsItem } from '../AboutUsItem';
 
 import { StyledMainContainer, StyledSlider } from './AboutUs.styles';
 
-export const AboutUs: React.FC = () => {
+export const AboutUs: FC = () => {
   const locale = getLocale();
   const { mediaAboutUs } = strings[locale];
   const { width } = useWindowDimensions();

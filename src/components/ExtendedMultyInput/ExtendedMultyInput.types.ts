@@ -1,7 +1,9 @@
+import { ChangeEvent, FocusEvent } from "react";
+
 export type ExtendedMultyInputProps = {
   placeholder: string;
   name: string;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
   value?: string;
 }

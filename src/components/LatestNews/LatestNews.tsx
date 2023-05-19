@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { shuffle } from 'lodash';
+import { FC, useCallback, useEffect, useMemo, useState } from 'react';
+import shuffle from 'lodash/shuffle';
 import Link from 'next/link';
 
 import strings, { getLocale } from '@/locales';
@@ -17,7 +17,7 @@ import {
 } from './LatestNews.styles';
 import { LatestNewsProps } from './LatestNews.types';
 
-export const LatestNews: React.FC<LatestNewsProps> = ({ isMainPage }) => {
+export const LatestNews: FC<LatestNewsProps> = ({ isMainPage }) => {
   const locale = getLocale();
   const { latestNews } = strings[locale];
   const [mounted, setMounted] = useState(false);
@@ -42,6 +42,7 @@ export const LatestNews: React.FC<LatestNewsProps> = ({ isMainPage }) => {
     return randomNews.map((item, index) => (
       <Link
         href={item.path}
+        prefetch={false}
         key={`main-page-secondary-news-item-${item.title}`}
       >
         <SecondaryNews

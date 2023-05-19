@@ -1,4 +1,4 @@
-import { useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { FC, useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 
 import { useAppDispatch } from '@/hooks/redux';
@@ -21,7 +21,7 @@ import {
 } from './ActivityAreaItem.styles';
 import { ActivityAreaItemProps } from './ActivityAreaItem.types';
 
-export const ActivityAreaItem: React.FC<ActivityAreaItemProps> = ({
+export const ActivityAreaItem: FC<ActivityAreaItemProps> = ({
   data,
   isLastIndex,
 }) => {
@@ -78,7 +78,7 @@ export const ActivityAreaItem: React.FC<ActivityAreaItemProps> = ({
   return (
     <StyledActivityAreaItemContainer isLastIndex={isLastIndex} isOpen={isOpen}>
       <StyledImageContainer>
-        <Link href='/news' onClick={() => onImageClick()}>
+        <Link href='/news' onClick={() => onImageClick()} prefetch={false}>
           <StyledActivityAreaImage
             onClick={() => onImageClick()}
             alt={data.alt}

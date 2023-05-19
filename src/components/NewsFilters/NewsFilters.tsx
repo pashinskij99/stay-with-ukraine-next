@@ -1,5 +1,6 @@
 import {
   Dispatch,
+  FC,
   SetStateAction,
   useCallback,
   useEffect,
@@ -32,7 +33,7 @@ import {
   StyledText,
 } from './NewsFilters.styles';
 
-export const NewsFilters: React.FC = () => {
+export const NewsFilters: FC = () => {
   const initialTopic = useAppSelector(
     (state) => state.news.topic as NewsFilterTopicType,
   );

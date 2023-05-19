@@ -1,8 +1,8 @@
-import React from "react";
+import { Dispatch, JSX,SetStateAction } from "react";
 import {toast} from "react-toastify";
 import axios from "axios";
 import {Formik} from "formik";
-import * as Yup from "yup";
+import {AnyObject,ObjectSchema} from "yup";
 
 import {HelpUkraineSelectType} from "@/components/NewsFilters/NewsFilters.data";
 import {Lang} from "@/locales";
@@ -13,13 +13,13 @@ import {helpUkraineSchema} from "@/utils/helpUkraine.schema";
 interface IContactHelpUkraine {
     resetKey: number;
     initialValues: any;
-    contactSchema: Yup.ObjectSchema<
+    contactSchema: ObjectSchema<
         {
             firstName: string;
             email: string | undefined;
             phone: string;
         },
-        Yup.AnyObject,
+        AnyObject,
         {
             firstName: undefined;
             email: undefined;
@@ -27,8 +27,8 @@ interface IContactHelpUkraine {
         }
     >;
     locale: Lang;
-    setResetKey: React.Dispatch<React.SetStateAction<number>>;
-    renderInputs: () => React.JSX.Element[];
+    setResetKey: Dispatch<SetStateAction<number>>;
+    renderInputs: () => JSX.Element[];
     contact: {
         title: string;
         subtitle: string;

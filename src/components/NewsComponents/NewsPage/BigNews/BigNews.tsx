@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import Link from 'next/link';
 
 import { TEXT_PRESETS } from '@/components/ExtendedText/ExtendedText.types';
@@ -23,13 +24,13 @@ import {
 } from './BigNews.styles';
 import { BigNewsProps } from './BigNews.types';
 
-export const BigNews: React.FC<BigNewsProps> = ({ data }) => {
+export const BigNews: FC<BigNewsProps> = ({ data }) => {
   const locale = getLocale();
 
   return (
     <StyledMainNewsContainer>
       <StyledImageContainer>
-        <Link href={data.path}>
+        <Link href={data.path} prefetch={false}>
           <StyledImage alt='main news' src={data.image} />
         </Link>
       </StyledImageContainer>
@@ -48,7 +49,7 @@ export const BigNews: React.FC<BigNewsProps> = ({ data }) => {
             {data.data}
           </StyledDateText>
         </StyledNewsMetaContainer>
-        <Link href={data.path}>
+        <Link href={data.path} prefetch={false}>
           <StyledNewsTitle color={COLORS.WHITE} lang={locale}>
             {data.title}
           </StyledNewsTitle>
@@ -56,7 +57,7 @@ export const BigNews: React.FC<BigNewsProps> = ({ data }) => {
         <StyledNewsSubtitle preset={TEXT_PRESETS.REG_16}>
           {data.subtitle}
         </StyledNewsSubtitle>
-        <Link href={data.path}>
+        <Link href={data.path} prefetch={false}>
           <StyledReadMoreContainer>
             <StyledReadMoreText preset={TEXT_PRESETS.SEMIBOLD_15}>
               {locale === 'en' ? 'Read more' : 'Читати далі'}

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import axios from 'axios';
-import { map } from 'lodash';
+import map from 'lodash/map';
 import Link from 'next/link';
 
 import useWindowDimensions from '@/hooks/useWindowDimension';
@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
 
   const renderSiteLinks = () => {
     return map(footer.links, (link) => (
-      <Link key={`site-link-${link.name}`} href={link.path}>
+      <Link key={`site-link-${link.name}`} href={link.path} prefetch={false}>
         <StyledFooterLink preset={TEXT_PRESETS.SEMIBOLD_15}>
           {link.name}
         </StyledFooterLink>
@@ -51,7 +51,7 @@ export const Footer: React.FC = () => {
 
   const renderExternalLinks = () => {
     return map(externalLinks, (link) => (
-      <Link key={`external-link-${link.name}`} href={link.link} target='blank'>
+      <Link key={`external-link-${link.name}`} href={link.link} target='blank' prefetch={false}>
         <StyledExternalLink
           src={link.image}
           alt={link.name}
@@ -108,6 +108,7 @@ export const Footer: React.FC = () => {
           <StyledCredentialsText
             lang={locale}
             href='mailto:general@stayua.com'
+            prefetch={false}
           >
             general@stayua.com
           </StyledCredentialsText>
@@ -118,7 +119,7 @@ export const Footer: React.FC = () => {
             {footer.phone}
           </StyledCredentialsField>
           <div className='flexCenter'>
-            <StyledCredentialsText lang={locale} href='tel:+38(093)1755333'>
+            <StyledCredentialsText lang={locale} href='tel:+38(093)1755333' prefetch={false}>
               +38 (093) 175 53 33
             </StyledCredentialsText>
             <StyledAirplaneImage
@@ -130,7 +131,7 @@ export const Footer: React.FC = () => {
         </StyledCredentialContainer>
       </StyledFooterCredsContainer>
       <StyledSiteInfoContainer>
-        <Link href='./'>
+        <Link href='./' prefetch={false}>
           <StyledFooterLogo
             src={IMAGES.LOGO_2}
             alt='footer logo'

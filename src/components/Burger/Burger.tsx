@@ -1,5 +1,5 @@
-import { useCallback, useState } from 'react';
-import { map } from 'lodash';
+import { FC, useCallback, useState } from 'react';
+import map from 'lodash/map';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -23,7 +23,7 @@ import {
 } from './Burger.styles';
 import { BurgerProps } from './Burger.types';
 
-export const Burger: React.FC<BurgerProps> = ({ isOpen, setIsOpen }) => {
+export const Burger: FC<BurgerProps> = ({ isOpen, setIsOpen }) => {
   const locale = getLocale();
   const router = useRouter();
   const { header } = strings[locale];
@@ -34,6 +34,7 @@ export const Burger: React.FC<BurgerProps> = ({ isOpen, setIsOpen }) => {
       <StyledBurgerLink
         isSelected={link.path === router.asPath}
         href={link.path}
+        prefetch={false}
         key={`header-link-${link.name}`}
       >
         {link.name}
@@ -53,7 +54,7 @@ export const Burger: React.FC<BurgerProps> = ({ isOpen, setIsOpen }) => {
       </BurgerContainer>
       <StyledBurgerMenu isOpen={isOpen}>
         <StyledLinksContainer>
-          <Link href='/help-Ukraine' key={`header-link-help-Ukraine`}>
+          <Link href='/help-Ukraine' key={`header-link-help-Ukraine`} prefetch={false}>
             <StyledHelpContainer isSelected={`/help-Ukraine` === router.asPath}>
               <StyledHelpText>
                 {locale === 'en' ? 'Help Ukraine' : 'Допомогти'}

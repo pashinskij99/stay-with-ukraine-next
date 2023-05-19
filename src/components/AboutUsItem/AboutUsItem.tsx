@@ -1,3 +1,5 @@
+import { FC } from 'react';
+
 import { TEXT_PRESETS } from '../ExtendedText/ExtendedText.types';
 
 import {
@@ -11,7 +13,7 @@ import {
 } from './AboutUsItem.styles';
 import { AboutUsItemProps } from './AboutUsItem.types';
 
-export const AboutUsItem: React.FC<AboutUsItemProps> = ({ item }) => {
+export const AboutUsItem: FC<AboutUsItemProps> = ({ item }) => {
   return (
     <StyledItemContainer>
       <StyledExtendedText preset={TEXT_PRESETS.REG_22}>

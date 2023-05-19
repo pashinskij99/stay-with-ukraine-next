@@ -38,7 +38,7 @@ export const Breadcrumbs: React.FC = () => {
 
   return (
     <StyledMainContainer>
-      <Link href='/'>
+      <Link href='/' prefetch={false}>
         <StyledPrevPath preset={TEXT_PRESETS.REG_14}>
           {locale == 'en' ? 'Home   /   ' : 'Головна   /   '}
         </StyledPrevPath>

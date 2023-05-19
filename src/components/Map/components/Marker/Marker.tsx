@@ -1,3 +1,5 @@
+import { FC } from 'react';
+
 import { TEXT_PRESETS } from '@/components/ExtendedText/ExtendedText.types';
 
 import {
@@ -10,7 +12,7 @@ import {
 } from './Marker.styles';
 import { MarkerProps } from './Marker.types';
 
-export const Marker: React.FC<MarkerProps> = ({
+export const Marker: FC<MarkerProps> = ({
   marker,
   activeMarker,
   onClick,

@@ -1,5 +1,6 @@
-import { useCallback, useState } from 'react';
-import { filter, map } from 'lodash';
+import { FC, useCallback, useState } from 'react';
+import filter from 'lodash/filter';
+import map from 'lodash/map';
 
 import useWindowDimensions from '@/hooks/useWindowDimension';
 import strings, { getLocale } from '@/locales';
@@ -24,7 +25,7 @@ import {
   StyledTagsContainer,
 } from './OurFriends.styles';
 
-export const OurFriends: React.FC = () => {
+export const OurFriends: FC = () => {
   const locale = getLocale();
   const { ourFriends } = strings[locale];
   const { width } = useWindowDimensions();

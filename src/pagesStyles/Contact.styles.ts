@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { ExtendedText } from '@/components';
-import { GeneralH2, GeneralH3 } from '@/styles/general.styles';
+import { GeneralH2 } from '@/styles/general.styles';
 import { COLORS } from '@/utils/colors';
 
 export type InputType = {

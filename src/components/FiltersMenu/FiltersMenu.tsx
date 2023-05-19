@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, FC, SetStateAction } from 'react';
 
 import strings, { getLocale } from '@/locales';
 
@@ -26,7 +26,7 @@ import {
 } from './FiltersMenu.styles';
 import { FiltersMenuProps } from './FiltersMenu.types';
 
-export const FiltersMenu: React.FC<FiltersMenuProps> = ({
+export const FiltersMenu: FC<FiltersMenuProps> = ({
   isOpen,
   setIsOpen,
   tag,

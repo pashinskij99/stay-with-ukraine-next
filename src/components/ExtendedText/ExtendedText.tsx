@@ -1,9 +1,9 @@
-import React from 'react';
+import {FC} from 'react';
 
 import { StyledExtendedText } from './ExtendedText.styles';
 import { ExtendedTextProps } from './ExtendedText.types';
 
-export const ExtendedText: React.FC<ExtendedTextProps> = ({
+export const ExtendedText: FC<ExtendedTextProps> = ({
   style,
   preset,
   children,

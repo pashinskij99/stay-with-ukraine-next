@@ -1,6 +1,6 @@
-import { useMemo } from 'react';
+import { FC, useMemo } from 'react';
 import Slider from 'react-slick';
-import { map } from 'lodash';
+import map from 'lodash/map';
 
 import { excitementsData } from '@/data';
 import useWindowDimensions from '@/hooks/useWindowDimension';
@@ -15,7 +15,7 @@ import {
   StyledTitle,
 } from './Excitements.styles';
 
-export const Excitements: React.FC = () => {
+export const Excitements: FC = () => {
   const locale = getLocale();
   const { excitements } = strings[locale];
   const { width } = useWindowDimensions();

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import { TEXT_PRESETS } from '@/components/ExtendedText/ExtendedText.types';
 import { getLocale } from '@/locales';
@@ -15,7 +15,7 @@ import {
 } from './SecondaryNews.styles';
 import { SecondaryNewsProps } from './SecondaryNews.types';
 
-export const SecondaryNews: React.FC<SecondaryNewsProps> = ({
+export const SecondaryNews: FC<SecondaryNewsProps> = ({
   data,
   index,
 }) => {

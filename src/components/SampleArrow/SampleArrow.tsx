@@ -1,10 +1,12 @@
+import { FC } from 'react';
+
 import {
   StyledCarouselArrow,
   StyledCarouselArrowContainer,
 } from './SampleArrow.styles';
 import { SampleArrowProps } from './SampleArrow.types';
 
-export const SampleArrow: React.FC<SampleArrowProps> = ({
+export const SampleArrow: FC<SampleArrowProps> = ({
   isLeft,
   onClick,
   icon,

@@ -26,7 +26,7 @@ export const NewsItem: React.FC<NewsItemProps> = ({ data, isInNewsItem }) => {
 
   return (
     <StyledItemContainer isInNewsItem={isInNewsItem}>
-      <Link href={data.path}>
+      <Link href={data.path} prefetch={false}>
         <StyledImageContainer isInNewsItem={isInNewsItem}>
           <StyledImage alt='news item' src={data.image} isInNewsItem={isInNewsItem} />
         </StyledImageContainer>
@@ -46,12 +46,12 @@ export const NewsItem: React.FC<NewsItemProps> = ({ data, isInNewsItem }) => {
         </StyledDateText>
       </StyledNewsMetaContainer>
       <StyledTextContainer>
-        <Link href={data.path}>
+        <Link href={data.path} prefetch={false}>
           <StyledTitle isInNewsItem={isInNewsItem} preset={TEXT_PRESETS.REG_22}>
             {data.title}
           </StyledTitle>
         </Link>
-        <Link href={data.path}>
+        <Link href={data.path} prefetch={false}>
           <StyledReadmoreContainer>
             <StyledReadmoreText preset={TEXT_PRESETS.SEMIBOLD_15}>
               {locale === 'en' ? 'Read more' : 'Читати далі'}

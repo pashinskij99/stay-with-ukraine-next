@@ -1,3 +1,5 @@
+import { FC } from 'react';
+
 import {
   StyledInfoContainer,
   StyledItemContainer,
@@ -9,7 +11,7 @@ import {
 } from './TheyAreWithUsItem.styles';
 import { TheyAreWithUsItemProps } from './TheyAreWithUsItem.types';
 
-export const TheyAreWithUsItem: React.FC<TheyAreWithUsItemProps> = ({
+export const TheyAreWithUsItem: FC<TheyAreWithUsItemProps> = ({
   data,
 }) => {
   return (

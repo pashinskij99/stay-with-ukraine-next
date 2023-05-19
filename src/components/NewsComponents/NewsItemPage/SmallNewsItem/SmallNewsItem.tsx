@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import { TEXT_PRESETS } from '@/components/ExtendedText/ExtendedText.types';
 import { getLocale } from '@/locales';
@@ -14,7 +14,7 @@ import {
 } from './SmallNewsItem.styles';
 import { SmallNewsItemProps } from './SmallNewsItem.types';
 
-export const SmallNewsItem: React.FC<SmallNewsItemProps> = ({ data }) => {
+export const SmallNewsItem: FC<SmallNewsItemProps> = ({ data }) => {
   const [mounted, setMounted] = useState(false);
   const locale = getLocale();
 

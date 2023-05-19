@@ -1,14 +1,11 @@
-import React from 'react';
+import { FC } from 'react';
+import dynamic from 'next/dynamic'
 
-import { MetaLayer } from '@/components';
+const DynamicAboutUs = dynamic(() => import('@/views/AboutUsView').then((res) => res.default), {ssr: false})
 
-const AboutUs: React.FC = () => {
+const AboutUs: FC = () => {
   return (
-    <MetaLayer currentPage='aboutUs'>
-      <div className='emptyPage'>
-        <h1>About Us page in developing progress</h1>
-      </div>
-     </MetaLayer>
+    <DynamicAboutUs />
   );
 };
 

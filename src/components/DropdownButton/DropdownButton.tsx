@@ -1,4 +1,5 @@
-import { map } from 'lodash';
+import { FC } from 'react';
+import map from 'lodash/map';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -17,7 +18,7 @@ import {
 } from './DropdownButton.styles';
 import { DropdownButtonType } from './DropdownButton.types';
 
-export const DropdownButton: React.FC<DropdownButtonType> = ({
+export const DropdownButton: FC<DropdownButtonType> = ({
   isOpen,
   setIsOpen,
   items,
@@ -36,6 +37,7 @@ export const DropdownButton: React.FC<DropdownButtonType> = ({
       <Link
         key={`site-language-${item}`}
         href={router.asPath}
+        prefetch={false}
         locale={getAnotherLocale(item as 'EN' | 'UK')}
       >
         <StyledDropdownMenuItem>

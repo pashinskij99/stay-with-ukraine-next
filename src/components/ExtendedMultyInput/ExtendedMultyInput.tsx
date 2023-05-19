@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { ChangeEvent, FC, FocusEvent, FormEvent,useState } from 'react';
 
 import { StyledMultyForm, StyledMultyInput } from './ExtendedMultyInput.styles';
 import { ExtendedMultyInputProps } from './ExtendedMultyInput.types';
 
-export const ExtendedMultyInput: React.FC<ExtendedMultyInputProps> = ({
+export const ExtendedMultyInput: FC<ExtendedMultyInputProps> = ({
   placeholder,
   name,
   onChange,
@@ -12,7 +12,7 @@ export const ExtendedMultyInput: React.FC<ExtendedMultyInputProps> = ({
 }) => {
   const [text, setText] = useState(value || '');
 
-  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
     setText(event.target.value);
     if (onChange) {
       //@ts-ignore
@@ -20,14 +20,14 @@ export const ExtendedMultyInput: React.FC<ExtendedMultyInputProps> = ({
     }
   };
 
-  const handleBlur = (event: React.FocusEvent<HTMLTextAreaElement>) => {
+  const handleBlur = (event: FocusEvent<HTMLTextAreaElement>) => {
     if (onBlur) {
       //@ts-ignore
       onBlur(event);
     }
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
   };
 

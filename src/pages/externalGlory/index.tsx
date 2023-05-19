@@ -1,16 +1,12 @@
-import React from 'react';
+import { FC } from "react";
+import dynamic from 'next/dynamic'
 
-import { MetaLayer } from '@/components';
+const DynamicExternalGlory = dynamic(() => import('@/views/ExternalGloryView').then((res) => res.default), {ssr: false})
 
-
-const AboutUs: React.FC = () => {
+const ExternalGlory: FC = () => {
   return (
-    <MetaLayer currentPage='externalGlory'>
-      <div className='emptyPage'>
-        <h1>External Glory page in developing progress</h1>
-      </div>
-    </MetaLayer>
+    <DynamicExternalGlory />
   );
 };
 
-export default AboutUs;
+export default ExternalGlory;
