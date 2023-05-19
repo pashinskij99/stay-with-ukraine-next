@@ -78,12 +78,23 @@ export const ActivityAreaItem: FC<ActivityAreaItemProps> = ({
   return (
     <StyledActivityAreaItemContainer isLastIndex={isLastIndex} isOpen={isOpen}>
       <StyledImageContainer>
+
         <Link href='/news' onClick={() => onImageClick()} prefetch={false}>
-          <StyledActivityAreaImage
-            onClick={() => onImageClick()}
-            alt={data.alt}
-            src={data.image}
-          />
+          {data.image_mobile
+            ? (<picture>
+                <source media="(max-width:576px)" srcSet={data.image_mobile.default.src} />
+                <StyledActivityAreaImage
+                  onClick={() => onImageClick()}
+                  alt={data.alt}
+                  src={data.image}
+                />
+            </picture>)
+            : <StyledActivityAreaImage
+                onClick={() => onImageClick()}
+                alt={data.alt}
+                src={data.image}
+              />
+          }
         </Link>
       </StyledImageContainer>
       <StyledActivityAreaTextContainer>

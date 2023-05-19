@@ -20,6 +20,7 @@ export type LangType = {
     subtitle: string;
     items: {
       image: string;
+      image_mobile?: string;
       title: string;
       text: string;
       alt: string;

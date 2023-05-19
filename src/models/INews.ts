@@ -7,6 +7,7 @@ import {
 
 export interface INews {
   image: string;
+  image_mobile?: any;
   tag: NewsFilterTagType[] | NewsFilterTagType;
   topic: NewsFilterTopicType[] | NewsFilterTopicType;
   project: NewsFilterProjectType[] | NewsFilterProjectType;

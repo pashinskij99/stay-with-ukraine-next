@@ -3,9 +3,12 @@ export const IMAGES = {
   AOA_CLUB_OF_FRIENDS: require('./AOA_Club of friends.webp'),
   AOA_COOPERATION: require('./AOA_Cooperation.webp'),
   AOA_CULTURE: require('./AOA_Culture.webp'),
-  AOA_ECONOMIC_REVIVAL: require('./AOA_Economic Revival.webp'),
+  AOA_CULTURE_MOBILE: require('./AOA_Culture-mobile.webp'),
+  AOA_ECONOMIC_REVIVAL: require('./AOA_EconomicRevival.webp'),
+  AOA_ECONOMIC_REVIVAL_MOBILE: require('./AOA_EconomicRevival-mobile.webp'),
   AOA_INTERNATIONAL_AFFAIRS: require('./AOA_International Affairs.webp'),
   AOA_MEDIA: require('./AOA_Media.webp'),
+  AOA_MEDIA_MOBILE: require('./AOA_Media-mobile.webp'),
   AOA_MEDICAL: require('./AOA_Medical.webp'),
   BACKGROUND: require('./background.webp'),
   BACKGROUND_2: require('./background2.webp'),
@@ -33,9 +36,11 @@ export const SLIDES = {
 export const NEWS_IMAGES = {
   FIRST_NEWS_IMG: require('./news/firstNewsImg.webp'),
   CHERNIHIV: require('./news/chernihiv.webp'),
+  CHERNIHIV_MOBILE: require('./news/chernihiv-mobile.webp'),
   LATEST_NEWS_SOLDIER_BIG: require('./news/latestNewsSoldier.webp'),
   PRESIDENT_BIG: require('./news/president.webp'),
   SENATE: require('./news/senate.webp'),
+  SENATE_MOBILE: require('./news/senate-mobile.webp'),
   THIRD_NEWS_IMG: require('./news/thirdNewsImg.jpeg'),
 }
 

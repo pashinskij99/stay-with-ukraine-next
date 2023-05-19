@@ -102,6 +102,7 @@ const modules: LangType = {
       },
       {
         image: IMAGES.AOA_ECONOMIC_REVIVAL,
+        image_mobile: IMAGES.AOA_ECONOMIC_REVIVAL_MOBILE,
         title: 'Economic Revival',
         text: "We showcase Ukraine's potential for economic growth to major corporations worldwide, emphasizing that investing in Ukraine and creating jobs enhances their global reputation and demonstrates their commitment to sustainability and support for those affected by Russian atrocities.",
         alt: 'office',
@@ -113,6 +114,7 @@ const modules: LangType = {
       },
       {
         image: IMAGES.AOA_CULTURE,
+        image_mobile: IMAGES.AOA_CULTURE_MOBILE,
         title: 'Culture',
         text: 'Our organization is dedicated to leading projects that both enhance the legacy of Ukrainian culture to impart it to the future generations while also showcasing its beauty to the world by organizing exhibitions, performances, and concerts, and inviting internationally respected figures to participate and support Ukraine.',
         alt: 'ruins',
@@ -135,6 +137,7 @@ const modules: LangType = {
       },
       {
         image: IMAGES.AOA_MEDIA,
+        image_mobile: IMAGES.AOA_MEDIA_MOBILE,
         title: 'Media',
         text: "We highlight heroic feats of Ukrainians protecting their country, as well as stories of atrocities committed by the Russians, emphasize the impact of those around the world, who helped Ukraine in its darkest times, and report on our organization's successes and new projects.",
         alt: 'conference',
@@ -203,6 +206,7 @@ const modules: LangType = {
       },
       {
         image: NEWS_IMAGES.CHERNIHIV,
+        image_mobile: NEWS_IMAGES.CHERNIHIV_MOBILE,
         tag: {
           id: FilterItemTagId.InFocus,
           valueEn: NewsTags.InFocus,

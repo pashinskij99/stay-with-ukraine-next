@@ -28,7 +28,13 @@ export const NewsItem: React.FC<NewsItemProps> = ({ data, isInNewsItem }) => {
     <StyledItemContainer isInNewsItem={isInNewsItem}>
       <Link href={data.path} prefetch={false}>
         <StyledImageContainer isInNewsItem={isInNewsItem}>
-          <StyledImage alt='news item' src={data.image} isInNewsItem={isInNewsItem} />
+          {data.image_mobile 
+            ? <picture>
+               <source media='(max-width:576px)' srcSet={data.image_mobile.default.src} />
+               <StyledImage alt='news item' src={data.image} isInNewsItem={isInNewsItem} />  
+            </picture>
+            : <StyledImage alt='news item' src={data.image} isInNewsItem={isInNewsItem} />
+          }
         </StyledImageContainer>
       </Link>
       <StyledNewsMetaContainer>

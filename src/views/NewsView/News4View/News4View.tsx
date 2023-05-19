@@ -93,7 +93,10 @@ const NewsViewPage4: FC = () => {
               </StyledBackText>
             </StyledBackContainer>
           </Link>
-          <StyledImage alt='president' src={NEWS_IMAGES.SENATE} />
+          <picture>
+            <source media="(max-width:576px)" srcSet={NEWS_IMAGES.SENATE_MOBILE} />
+            <StyledImage alt='president' src={NEWS_IMAGES.SENATE} />
+          </picture>
           <StyledDataText preset={TEXT_PRESETS.REG_16}>
             {locale === 'en' ? `19 October 2022` : `19 Жовтня 2022`}
           </StyledDataText>

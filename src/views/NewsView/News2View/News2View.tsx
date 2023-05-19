@@ -91,7 +91,10 @@ const NewsViewPage2: FC = () => {
               </StyledBackText>
             </StyledBackContainer>
           </Link>
-          <StyledImage alt='president' src={NEWS_IMAGES.CHERNIHIV} />
+          <picture>
+            <source media='(max-width:576px)' srcSet={NEWS_IMAGES.CHERNIHIV_MOBILE.default.src} />
+            <StyledImage alt='president' src={NEWS_IMAGES.CHERNIHIV} />
+          </picture>
           <StyledDataText preset={TEXT_PRESETS.REG_16}>
             {locale === 'en' ? `April 3, 2022` : `3 квітня 2022р`}
           </StyledDataText>
