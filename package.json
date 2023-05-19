@@ -27,13 +27,22 @@
     "react-redux": "^8.0.5",
     "react-slick": "^0.29.0",
     "react-toastify": "^9.1.1",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.6",
     "yup": "^1.0.2"
   },
   "devDependencies": {
-    "typescript": "5.0.4",
     "@builder.io/partytown": "^0.7.6",
+    "@next/bundle-analyzer": "^13.4.2",
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "20.1.4",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.0.11",
+    "@types/react-redux": "^7.1.25",
+    "@types/react-slick": "^0.23.10",
+    "@types/styled-components": "^5.1.26",
+    "@types/yup": "^0.32.0",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
     "eslint": "^8.35.0",
@@ -44,14 +53,6 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "prettier": "^2.8.4",
-    "@types/lodash": "^4.14.191",
-    "@types/node": "20.1.4",
-    "@types/react": "18.2.6",
-    "@types/react-dom": "18.0.11",
-    "@types/react-redux": "^7.1.25",
-    "@types/react-slick": "^0.23.10",
-    "@types/styled-components": "^5.1.26",
-    "@types/yup": "^0.32.0",
-    "@next/bundle-analyzer": "^13.4.2"
+    "typescript": "5.0.4"
   }
 }
