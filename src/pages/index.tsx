@@ -26,6 +26,10 @@ const StyledBackground = styled.div`
   }
 `
 
+export const config = {
+  unstable_runtimeJS: false
+}
+
 export default function Home() {
   //! TODO: Add to MetaLayer description and children!
   //! TODO: Uncomment the components when they are needed!
