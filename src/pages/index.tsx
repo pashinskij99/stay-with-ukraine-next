@@ -26,9 +26,9 @@ const StyledBackground = styled.div`
   }
 `
 
-export const config = {
-  unstable_runtimeJS: false
-}
+// export const config = {
+//   unstable_runtimeJS: false
+// }
 
 export default function Home() {
   //! TODO: Add to MetaLayer description and children!
@@ -50,6 +50,7 @@ export default function Home() {
           <link rel='alternate' hrefLang='uk' href='https://www.stayua.com/uk' />
         </>
       }>
+
       <Script async id='organization-structured-data' strategy='afterInteractive' type='application/ld+json'>
         {`
           "@context": "https://schema.org",
