@@ -11,7 +11,7 @@ import {
   LatestNews,
   MetaLayer,
 } from '@/components';
-import ContactHelpUkraine from '@/components/ContactHelpUkraine' 
+import ContactHelpUkraine from '@/components/ContactHelpUkraine'
 import {
   HelpUkraineSelectType,
   NewsFilterFormatType,
@@ -116,17 +116,9 @@ const HelpUkraineView: FC = () => {
 
   return (
     <MetaLayer
-      title={locale === 'en' ? 'Stay With Ukraine | How to Help Ukraine' : 'Допомогти Україні |Stay UA'}
-      description={locale === 'en' ?'The organization was created with the sole purpose of helping the Ukrainian people and saving as many lives as possible through any means possible.' : 'Організація створена з єдиною метою – допомогти українському народу та врятувати якомога більше життів будь-якими можливими засобами.'}
       backgroundColor={COLORS.WHITE}
       currentPage='help-Ukraine'
       headerStyle='transparent'
-      headChildren={
-        <>
-          <link rel="alternate" hrefLang="en" href="https://www.stayua.com/help-Ukraine" />
-          <link rel="alternate" hrefLang="uk" href="https://www.stayua.com/uk/help-Ukraine" />
-        </>
-      }
     >
       <FlagBlock
         title={locale === 'en' ? 'Help Ukraine' : 'Допоможіть Україні'}

@@ -67,17 +67,9 @@ const NewsViewPage2: FC = () => {
 
   return (
     <MetaLayer
-      title={locale === 'en' ? 'The Story about Chernihiv | Stay UA': 'Історія про Чернігів | Stay UA'}
-      description={locale === 'en' ? 'Today, we would like to share a story of resilience and compassion - a story about delivering aid to the heroic city of Chernihiv at the beginning of the war.' : 'Сьогодні ми хочемо поділитися історією стійкості та співчуття – історією про доставку допомоги місту-герою Чернігову на початку війни.'}
       backgroundColor={COLORS.WHITE}
       currentPage='2'
       headerStyle='black'
-      headChildren={
-        <>
-          <link rel="alternate" hrefLang="en" href="https://www.stayua.com/news/2" />
-          <link rel="alternate" hrefLang="uk" href="https://www.stayua.com/uk/news/2" />
-        </>
-      }
     >
       <StyledMainContainer>
         <StyledContentContainer>

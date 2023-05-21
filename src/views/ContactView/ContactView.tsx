@@ -1,6 +1,5 @@
 import { FC, useState } from "react";
 import map from "lodash/map";
-import dynamic from "next/dynamic";
 
 import {
   FlagBlock,
@@ -52,33 +51,13 @@ const ContactView: FC = () => {
       return (
         <ContactUsField1 input={input} />
       );
-    }); 
+    });
 
   return (
     <MetaLayer
-      title={locale === "en" ? "Contact Us | Stay UA" : "Контакти | Stay UA"}
-      description={
-        locale === "en"
-          ? "Get in touch with Stay With Ukraine organization."
-          : "Контакти для зв'язку з організацією Stay With Ukraine."
-      }
       backgroundColor={COLORS.WHITE}
       currentPage="contact"
       headerStyle="transparent"
-      headChildren={
-        <>
-          <link
-            rel="alternate"
-            hrefLang="en"
-            href="https://www.stayua.com/contact"
-          />
-          <link
-            rel="alternate"
-            hrefLang="uk"
-            href="https://www.stayua.com/uk/contact"
-          />
-        </>
-      }
     >
       <>
         <FlagBlock title={locale === "en" ? "Contact Us" : "Контакти"} />
@@ -89,8 +68,6 @@ const ContactView: FC = () => {
           <StyledSubtitle preset={TEXT_PRESETS.REG_33}>
             {contact.subtitle}
           </StyledSubtitle>
-
-
 
           <FormContact
             contact={contact}
@@ -103,7 +80,7 @@ const ContactView: FC = () => {
           />
         </StyledMainContainer>
         <LatestNews isMainPage={false} />
-      </> 
+      </>
     </MetaLayer>
   );
 };
